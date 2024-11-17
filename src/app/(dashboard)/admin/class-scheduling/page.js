@@ -1,9 +1,9 @@
-import React from 'react';
+import ClassSchedulingPage from "@/Components/ClassSchedulingPage";
 
 const page = () => {
     return (
         <div>
-            this is class scheduling page
+          <ClassSchedulingPage/>
         </div>
     );
 };

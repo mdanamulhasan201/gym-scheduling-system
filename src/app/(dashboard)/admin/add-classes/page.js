@@ -1,10 +1,10 @@
-import ManageTrainersPage from '@/Components/ManageTrainersPage';
+import AddClassPage from '@/Components/AddClassPage';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-           <ManageTrainersPage/>
+          <AddClassPage/>
         </div>
     );
 };

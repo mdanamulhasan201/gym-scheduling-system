@@ -10,7 +10,8 @@ const AdminSidebar = ({ isExpanded, toggleSidebar }) => {
     { title: "Manage Trainers", href: "/admin/manage-trainers", icon: FiUsers },
     { title: "Class Scheduling", href: "/admin/class-scheduling", icon: FiCalendar },
   ];
-
+  // const pathName = usePathname();
+  // className={`${pathName === link.path && "text-red-600"}`}
   return (
     <motion.div
       animate={{
