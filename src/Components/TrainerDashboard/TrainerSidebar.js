@@ -4,13 +4,12 @@ import { FiChevronLeft, FiChevronRight, FiHome, FiUsers, FiUserPlus, FiCalendar 
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-const AdminSidebar = ({ isExpanded, toggleSidebar }) => {
+const TrainerSidebar = ({ isExpanded, toggleSidebar }) => {
   const pathName = usePathname(); 
   const links = [
-    { title: "Dashboard", href: "/admin", icon: FiHome },
-    { title: "Add Trainers", href: "/admin/add-trainers", icon: FiUserPlus },
-    { title: "Manage Trainers", href: "/admin/manage-trainers", icon: FiUsers },
-    { title: "Class Scheduling", href: "/admin/class-scheduling", icon: FiCalendar },
+    { title: "Dashboard", href: "/trainer", icon: FiHome },
+    { title: "Scheduling Classes ", href: "/trainer/scheduling-classes", icon: FiUserPlus },
+
   ];
 
   return (
@@ -35,7 +34,7 @@ const AdminSidebar = ({ isExpanded, toggleSidebar }) => {
           }}
           className={`text-xl font-bold ${isExpanded ? "block" : "hidden"}`}
         >
-          Admin Panel
+          Trainer Panel
         </motion.h2>
         <button
           className="text-white focus:outline-none"
@@ -77,4 +76,4 @@ const AdminSidebar = ({ isExpanded, toggleSidebar }) => {
   );
 };
 
-export default AdminSidebar;
+export default TrainerSidebar;

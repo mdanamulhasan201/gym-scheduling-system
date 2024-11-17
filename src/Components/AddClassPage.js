@@ -3,24 +3,24 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const AddClassPage = () => {
-  // Define the form using useForm from react-hook-form
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  // Trainer data for the dropdown
+
   const trainers = [
     { id: 1, name: "John Doe" },
     { id: 2, name: "Jane Smith" },
     { id: 3, name: "Robert Brown" },
   ];
 
-  // Form submission handler
+
   const onSubmit = (data) => {
     console.log("Form Submitted:", data);
-    // You can make API calls or other logic here
+ 
   };
 
   return (

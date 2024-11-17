@@ -36,7 +36,7 @@ const ClassSchedulingPage = () => {
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [classesPerPage] = useState(3); // Display 3 classes per page
+  const [classesPerPage] = useState(3); 
   const [showDropdown, setShowDropdown] = useState(null);
 
   // Calculate the index range for pagination

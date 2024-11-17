@@ -1,11 +1,39 @@
-
+"use client";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import TrainerSidebar from "@/Components/TrainerDashboard/TrainerSidebar";
+import TrainerNavbar from "@/Components/TrainerDashboard/TrainerNavbar";
 
 const layout = ({ children }) => {
+  const [isExpanded, setIsExpanded] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsExpanded((prev) => !prev);
+  };
   return (
-    <div>
-      <h1>slidebar</h1>
-      {children}
-      <h1>footer</h1>
+    <div className="flex min-h-screen">
+      {/* Sidebar */}
+      <motion.div
+        animate={{
+          width: isExpanded ? "16rem" : "4rem",
+        }}
+        transition={{
+          duration: 0.4,
+          ease: "easeInOut",
+        }}
+        className="bg-gray-800 text-white"
+      >
+        <TrainerSidebar isExpanded={isExpanded} toggleSidebar={toggleSidebar} />
+      </motion.div>
+
+      {/* Main Content Container */}
+      <div className="flex flex-col flex-1">
+        {/* Navbar */}
+        <TrainerNavbar />
+
+        {/* Main Content */}
+        <div className="flex-1 px-10 py-4 bg-gray-100">{children}</div>
+      </div>
     </div>
   );
 };
