@@ -50,7 +50,7 @@ const Navbar = () => {
             className="hover:text-gray-400 cursor-pointer"
           >
             <Link
-              href="#signup"
+              href="/register"
               className="bg-indigo-600 px-4 py-2 rounded text-white"
             >
               Sign Up
@@ -85,7 +85,7 @@ const Navbar = () => {
             <Link href="/login">Login</Link>
           </div>
           <div className="block px-4 py-2 hover:bg-gray-600">
-            <Link href="/signup">Sign Up</Link>
+            <Link href="/register">Sign Up</Link>
           </div>
         </motion.div>
       )}
