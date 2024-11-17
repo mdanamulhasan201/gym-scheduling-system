@@ -1,6 +1,7 @@
 'use client';
 
 const AllClass = () => {
+
   const data = [
     {
       id: 1,
@@ -42,7 +43,21 @@ const AllClass = () => {
       duration: 30, // in minutes
       trainerName: "Ryan Taylor",
     },
+    {
+      id: 6,
+      title: "Spin Class Express",
+      enrolled: 9,
+      seat: 18,
+      duration: 30, // in minutes
+      trainerName: "Ryan Taylor",
+    },
   ];
+
+
+  const handleEnroll = (id) => {
+    const classData = data.find(item => item.id === id); 
+    // console.log('Class Data:', classData); 
+  };
 
   return (
     <div className="max-w-screen-xl mx-auto px-10 my-10">
@@ -59,12 +74,17 @@ const AllClass = () => {
               <span className="font-bold">Trainer:</span> {item.trainerName}
             </p>
             <p className="text-gray-600">
-              <span className="font-bold">Duration:</span> {item.duration} minutes
+              <span className="font-bold">Duration:</span> {item.duration}{" "}
+              minutes
             </p>
             <p className="text-gray-600">
-              <span className="font-bold">Seats:</span> {item.enrolled}/{item.seat}
+              <span className="font-bold">Seats:</span> {item.enrolled}/
+              {item.seat}
             </p>
-            <button className="mt-4 w-full bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition">
+            <button
+              onClick={() => handleEnroll(item.id)} // Pass the class id to the handler
+              className="mt-4 w-full bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition"
+            >
               Enroll Now
             </button>
           </div>
