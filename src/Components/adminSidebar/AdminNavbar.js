@@ -10,7 +10,7 @@ const AdminNavbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between px-4 py-2 bg-gray-800 text-white">
+    <div className="flex items-center justify-between px-10 py-2 bg-gray-800 text-white sticky top-0 z-50 shadow-lg">
       {/* Left Side - Search Bar */}
       <div className="flex-grow">
         <input

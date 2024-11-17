@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
-import { FiChevronLeft, FiChevronRight, FiHome, FiUsers, FiCalendar } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight, FiHome, FiUsers,FiUserPlus, FiCalendar } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const AdminSidebar = ({ isExpanded, toggleSidebar }) => {
   const links = [
     { title: "Dashboard", href: "/admin", icon: FiHome },
+    { title: "Add Trainers", href: "/admin/add-trainers", icon: FiUserPlus },
     { title: "Manage Trainers", href: "/admin/manage-trainers", icon: FiUsers },
     { title: "Class Scheduling", href: "/admin/class-scheduling", icon: FiCalendar },
   ];
@@ -30,9 +31,7 @@ const AdminSidebar = ({ isExpanded, toggleSidebar }) => {
             duration: 0.4,
             ease: "easeInOut",
           }}
-          className={`text-xl font-bold ${
-            isExpanded ? "block" : "hidden"
-          } transition-all`}
+          className={`text-xl font-bold ${isExpanded ? "block" : "hidden"}`}
         >
           Admin Panel
         </motion.h2>
@@ -50,15 +49,15 @@ const AdminSidebar = ({ isExpanded, toggleSidebar }) => {
           {links.map((link, index) => {
             const Icon = link.icon;
             return (
-              <li key={index} className="overflow-hidden">
+              <li key={index}>
                 <Link
                   href={link.href}
                   className="flex items-center px-4 py-2 space-x-4 rounded hover:bg-gray-700 transition"
                 >
-                  {/* Render the icon */}
+                  {/* Icon */}
                   <Icon size={20} />
-                  {/* Conditionally render the title */}
-                  {isExpanded && <span>{link.title}</span>}
+                  {/* Title */}
+                  {isExpanded && <span className="ml-2">{link.title}</span>}
                 </Link>
               </li>
             );

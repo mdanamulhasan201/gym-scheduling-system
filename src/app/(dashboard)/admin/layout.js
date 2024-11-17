@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
         <AdminNavbar />
 
         {/* Main Content */}
-        <div className="flex-1 p-4 bg-gray-100">{children}</div>
+        <div className="flex-1 px-10 py-4 bg-gray-100">{children}</div>
       </div>
     </div>
   );
