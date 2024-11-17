@@ -20,7 +20,7 @@ const Navbar = () => {
   ];
 
   return (
-    <motion.nav className="bg-[#F1F6FF] text-black">
+    <motion.nav className="bg-[#F1F6FF] text-black sticky top-0 z-50 shadow-md">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <motion.div whileHover={{ scale: 1.1 }} className="text-xl font-bold">
@@ -51,7 +51,7 @@ const Navbar = () => {
           >
             <Link
               href="#signup"
-              className="bg-indigo-600 px-3 py-1 rounded text-white"
+              className="bg-indigo-600 px-4 py-2 rounded text-white"
             >
               Sign Up
             </Link>
