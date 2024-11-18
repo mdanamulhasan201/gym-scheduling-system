@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import TraineeSlidebar from "@/Components/TraineeDashboard/TraineeSlidebar";
 import TraineeNavbar from "@/Components/TraineeDashboard/TraineeNavbar";
-const layout = ({ children }) => {
+const Layout = ({ children }) => {
   const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleSidebar = () => {
@@ -38,4 +38,4 @@ const layout = ({ children }) => {
   );
 };
 
-export default layout;
+export default Layout;

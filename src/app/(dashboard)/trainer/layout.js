@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import TrainerSidebar from "@/Components/TrainerDashboard/TrainerSidebar";
 import TrainerNavbar from "@/Components/TrainerDashboard/TrainerNavbar";
 
-const layout = ({ children }) => {
+const Layout = ({ children }) => {
   const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleSidebar = () => {
@@ -38,4 +38,4 @@ const layout = ({ children }) => {
   );
 };
 
-export default layout;
+export default Layout;
