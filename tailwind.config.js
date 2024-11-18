@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     './pages/**/*.{js,jsx,ts,tsx}',
+    "./app/**/*.{js,ts,jsx,tsx}", 
     
 
   ],

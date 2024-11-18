@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    reactStrictMode: true,
+    swcMinify: true,
+    webpack(config) {
+      // Custom webpack config here, if needed
+      return config;
+    },
+  };
+  
+  export default nextConfig;
+  
