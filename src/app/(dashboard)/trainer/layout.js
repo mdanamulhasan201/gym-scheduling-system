@@ -10,6 +10,7 @@ const Layout = ({ children }) => {
   const toggleSidebar = () => {
     setIsExpanded((prev) => !prev);
   };
+
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
